@@ -1,0 +1,44 @@
+{% extends 'account/basic.html' %} {% block body %}
+
+<div class="container-fluid">
+    <br>
+    <div class="row">
+
+        <div class="col-md">
+            <h5>Products</h5>
+            <hr>
+            <div class="card card-body" id="folder">
+                <table class="table">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Category</th>
+                            <th>Tags</th>    
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for product in products %}
+                        <tr>
+                            <td><p class="fw-bold">{{product.name}}</p></td>
+                            <td>{{product.description|truncatechars:125}}</td>
+                            <td>{{product.price}}</td>
+                            <td>
+                                {% for tags in product.tags.all %}
+                                <span class="badge rounded-pill bg-warning text-dark m-1">{{ tags }}</span>
+                                {% endfor %}
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <div>
+					<br>
+				</div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock body %}

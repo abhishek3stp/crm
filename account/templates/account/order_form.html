@@ -1,0 +1,23 @@
+{% extends 'account/basic.html' %}
+
+{% block body %}
+
+<div class="container p-8">
+    <h3 class="font-weight-normal my-4">Create Order</h3>
+    <hr>
+    <div class="card card-body">
+        <div class="m-4">
+            <form action="" method="POST">
+                {% csrf_token %}
+				{{ form.management_form }}
+				{% for field in form %}
+					{{field}}
+					<hr>
+				{% endfor %}
+                <input class="btn btn-primary btn-sm active mx-2" type="submit" name="submit">
+            </form>
+        </div>
+    </div>
+</div>
+
+{%endblock%}
