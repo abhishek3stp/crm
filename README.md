@@ -1,8 +1,8 @@
 # CRM
-CRM is a two-way system between, Customer and Vendor. Single platform for Vendor and Customer.
-The Vendor can organize the status of all orders made by the Customer.
-Django Decorators handle Authorization of Vendor and Customers.
-Simple Mail Transfer Protocol to reset the Password.
+CRM is a two-way system between, Customer and Vendor. Single platform for Vendor and Customer.<br />
+The Vendor can organize the status of all orders made by the Customer.<br />
+Django Decorators handle Authorization of Vendor and Customers.<br />
+Simple Mail Transfer Protocol to reset the Password.<br />
 
 Hosted on Heroku https://ak66-crm.herokuapp.com
 
